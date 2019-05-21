@@ -6,6 +6,7 @@ namespace App\Model;
 final class Category
 {
     private $name;
+    private $slug;
 
     public function __construct(string $name)
     {
@@ -15,5 +16,13 @@ final class Category
     public function getName(): string
     {
         return $this->name;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getSlug()
+    {
+        return $this->slug;
     }
 }
