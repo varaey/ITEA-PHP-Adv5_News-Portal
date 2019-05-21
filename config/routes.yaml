@@ -4,3 +4,5 @@ index:
 category_page:
     path: /category/{slug}
     controller: App\Controller\CategoryPageController::index
+    requirements:
+        page: .+

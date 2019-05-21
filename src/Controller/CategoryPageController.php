@@ -2,8 +2,6 @@
 
 namespace App\Controller;
 
-
-
 use App\Service\PostsList\PostsListInterface;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
@@ -16,7 +14,7 @@ class CategoryPageController extends AbstractController
      */
     public function index(string $slug, PostsListInterface $postLists): Response
     {
-//        dd('1');
+        /** @var TYPE_NAME $postLists */
         $posts = $postLists->getByCategory($slug);
         return $this->render('category_page/index.html.twig', [
             'posts' => $posts,
